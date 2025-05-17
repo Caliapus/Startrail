@@ -63,7 +63,7 @@ If ```.password``` file is missing, the archive opens when you click Show Archiv
 Rating is saved as a number (1–5) in the ```entries.json``` file. 
 
 
-### 🛡 Security
+###  Security
 
 Security on this app is like a lock drawn in impressionist style on a gate: it might fool robots, but it won't stop anyone motivated.
 
