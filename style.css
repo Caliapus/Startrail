@@ -1,0 +1,380 @@
+body {
+  background: #424242;
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
+  width: 320px;
+  margin: 45px auto;
+}
+
+form h1 {
+  font-size: 3em;
+  font-weight: 300;
+  text-align: center;
+  color: #2196F3;
+  margin-bottom: 10px;
+  transition: color 0.3s ease, margin 0.3s ease;
+}
+
+form h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #b3b3b3;
+}
+
+hr.sep {
+  background: #2196F3;
+  border: none;
+  height: 2px;
+  width: 25%;
+  margin: 0 auto 45px auto;
+  transition: margin 0.3s ease, opacity 0.3s ease;
+}
+
+.group {
+  position: relative;
+  margin: 25px 0;
+  transition: margin 0.3s ease;
+}
+
+input,
+textarea {
+  background: none;
+  color: #b3b3b3;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 320px;
+  border: none;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -14px;
+  font-size: 12px;
+  color: #2196F3;
+}
+
+input:focus ~ .bar:before,
+textarea:focus ~ .bar:before {
+  width: 320px;
+}
+
+label {
+  color: #b3b3b3;
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 300ms ease all;
+  pointer-events: none;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 320px;
+}
+
+.bar:before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #2196F3;
+  transition: 300ms ease all;
+  left: 0;
+}
+
+.btn-box {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.btn {
+  background: #fff;
+  color: #4a4a4a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+              0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18),
+              0 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+.btn-submit {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-cancel {
+  background: #eee;
+}
+
+.entries-section {
+  margin-top: 2rem;
+  color: white;
+}
+
+.entry {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #666;
+  padding-bottom: 1rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.entry.fade-in-start {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.group.dimmed {
+  margin: 0px 0;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.group.dimmed input,
+.group.dimmed textarea,
+.group.dimmed label,
+.group.dimmed .bar:before {
+  opacity: 0.4;
+  pointer-events: none;
+  border-color: transparent;
+  
+
+}
+
+.header-group {
+  transition: margin 0.3s ease, padding 0.3s ease;
+  margin-bottom: 45px;
+}
+
+.header-group.dimmed {
+  margin-bottom: 10px;
+}
+
+.header-group.dimmed h1 {
+  color: #b3b3b3;
+}
+
+.header-group.dimmed .sep {
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+
+#archiveContainer {
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  overflow: hidden;
+}
+
+/* Snackbar style */
+.snackbar {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 300px;
+  max-width: 90%;
+  padding: 14px 16px;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  z-index: 1000;
+  transition: opacity 0.4s ease, top 0.4s ease;
+  pointer-events: none; /* prevents blocking input */
+}
+
+.snackbar.show {
+  top: 20px;
+  opacity: 1;
+}
+
+.snackbar.success {
+  background-color: #2e7d32;
+}
+
+.snackbar.error {
+  background-color: #c62828;
+}
+
+.snackbar-action {
+  background: transparent;
+  border: none;
+  color: #ffd54f;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Inline fields customization */
+.inline-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline-fields .group {
+  flex: 1;
+  margin: 0;
+}
+
+.inline-fields input {
+  font-size: 18px;
+  width: 100%;
+}
+
+.inline-fields label {
+  font-size: 12px;
+}
+
+.inline-fields .bar {
+  width: 100%;
+}
+
+.inline-fields input:focus ~ .bar:before,
+.inline-fields textarea:focus ~ .bar:before {
+  width: 100%;
+}
+
+/* Time input specific tweaks */
+.inline-fields .group.time-inline {
+  flex: none;
+  width: auto;
+  text-align: right;
+}
+
+.inline-fields .group.time-inline input {
+  border: none;
+  border-bottom: none;
+  color: #b3b3b3;
+  text-align: right;
+  font-size: 14px;
+  background: none;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.inline-fields .group.time-inline .bar {
+  display: none;
+}
+
+.inline-fields .group.time-inline label {
+  display: none;
+}
+
+
+/* Initially hiding the password input field */
+#passwordinput {
+  display: none;
+  width: 50%;
+  padding: 30px 30px 10px 5px;
+  background: none;
+  color: #b3b3b3;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #b3b3b3;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+/* Styling to match the button */
+#password-input:focus {
+  outline: none;
+  border-color: #2196F3;
+}
+
+
+#lock-icon {
+  display: inline-block;
+  margin-left: 0px;
+  font-size: 12px;
+  color: #888; /* Base grey */
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+/* Active (locked, unauthenticated) */
+#lock-icon.active {
+  opacity: 1;
+  color: #888; /* Darker grey */
+}
+
+/* Inactive (unlocked, authenticated) */
+#lock-icon.inactive {
+  opacity: 0.4;
+  color: #bbb; /* Lighter grey */
+}
+
+.rating-group {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.rating-label {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.stars {
+  display: flex;
+  gap: 0.3rem;
+  align-items:center;
+  justify-content: center; /* Center the stars horizontally */
+}
+
+.star {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star.hovered,
+.star.selected {
+  color: #ffb400; /* Material amber */
+}
+
+.entry-rating {
+  display: flex;
+  gap: 2px;
+  margin: 0.25em 0;
+}
+
+.entry-star {
+  font-size: 1.2rem;
+  color: gray;
+  transition: color 0.3s;
+}
+
+.entry-star.filled {
+  color: gold;
+}
+

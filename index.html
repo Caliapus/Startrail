@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Words. Just Words</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+</head>
+<body>
+  <div class="wrapper">
+    <form id="journalForm">
+    <div class="header-group">
+      <h1>Words</h1>
+      <hr class="sep" />
+    </div>
+    
+<div class="inline-fields">
+  <div class="group location-inline">
+    <input type="text" id="entryLocation" required />
+    <span class="bar"></span>
+    <label for="entryLocation"></label>
+  </div>
+
+  <div class="group time-inline">
+    <input type="text" id="entryTime" readonly required />
+  </div>
+</div>
+
+<div class="group rating-group">
+<!--  <label for="entryRating" class="rating-label">Your mood</label> -->
+  <div class="stars" id="starRating">
+    <span class="star" data-value="1">★</span>
+    <span class="star" data-value="2">★</span>
+    <span class="star" data-value="3">★</span>
+    <span class="star" data-value="4">★</span>
+    <span class="star" data-value="5">★</span>
+  </div>
+  <input type="hidden" id="entryRating" name="entryRating" value="0" />
+</div>
+
+
+   
+  <div class="group">
+    <textarea id="entryInput" rows="5" required></textarea>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label for="entryInput">Journal entry</label>
+  </div>
+
+      <div class="btn-box">
+        <button type="button" id="save-entry" class="btn btn-submit">Save Entry</button>
+      </div>
+
+    <div class="btn-box">
+      <button type="button" class="btn btn-cancel" id="toggle-archive">Show Archive <span id="lock-icon" style="display: none;">🔐</span></button>
+      <!-- Password input will be dynamically added here -->
+    </div>
+
+    <div id="archiveContainer" class="entries-section" style="display: none;">
+      <div id="entries"></div>
+    </div>
+
+    </form>
+    <input type="hidden" id="entryIsoTime" />
+    <!-- Snackbar container -->
+    <div id="snackbar" class="snackbar">
+      <div id="snackbar-message"></div>
+      <button id="snackbar-action-button" class="snackbar-action"></button>
+    </div>
+
+  </div>
+
+  <script src="./cities/city.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
