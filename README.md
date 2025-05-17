@@ -8,7 +8,7 @@ Entries are saved locally in a `entries.json` file for later manipulation, and a
 
 ## Demo
 
-👉 [Try the Tiny Web Mood Journal](https://tiny-web-mood-journal.caliap.ro)
+👉 [Try Startrail](https://startrail.caliap.ro)
 
 <img src="https://github.com/user-attachments/assets/ac94f95e-2a19-42b7-82fd-0361aec77529" width=300>
 .
