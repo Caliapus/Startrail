@@ -89,9 +89,9 @@ Security on this app is like a lock drawn in impressionist style on a gate: it m
 
 ###  Credits
 
-[@EmSuru](!https://github.com/emsuru) for coming up with the star counting idea and getting me hooked to it. 
+[@EmSuru](https://github.com/emsuru) for coming up with the star counting idea and getting me hooked to it. 
 
-City data via cities5000.csv from [cityjs](!https://github.com/MxAshUp/cityjs)
+City data via cities5000.csv from [cityjs](https://github.com/MxAshUp/cityjs)
 
 Powered by Caipirinha, OpenAI and ❤️ 
 
