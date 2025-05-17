@@ -10,8 +10,8 @@ Entries are saved locally in a `entries.json` file for later manipulation, and a
 
 👉 [Try the Tiny Web Mood Journal](https://tiny-web-mood-journal.caliap.ro)
 
-![Image](https://github.com/user-attachments/assets/ac94f95e-2a19-42b7-82fd-0361aec77529| width=100))
-![Image](https://github.com/user-attachments/assets/9533d48e-4498-4af5-b282-de8d31ccdd8e| width=100))
+![Image](https://github.com/user-attachments/assets/ac94f95e-2a19-42b7-82fd-0361aec77529 | width=100))
+![Image](https://github.com/user-attachments/assets/9533d48e-4498-4af5-b282-de8d31ccdd8e | width=100))
 
 ---
 
