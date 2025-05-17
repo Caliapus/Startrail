@@ -10,6 +10,8 @@ Entries are saved locally in a `entries.json` file for later manipulation, and a
 
 👉 [Try the Tiny Web Mood Journal](https://tiny-web-mood-journal.caliap.ro)
 
+
+
 ---
 
 ## Installation
@@ -30,7 +32,7 @@ Or just create yourself a .password file with a hashed password. I don't care.
 If ```.password``` file is missing, the archive opens when you click Show Archive. No questions asked.
 
 
-## 🚀 Features
+##  Features
 
 📝 Quick entries – Capture your thoughts in seconds
 
