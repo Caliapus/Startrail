@@ -1,7 +1,7 @@
 {
-  "name": "My Journal App",
+  "name": "Startrail",
   "short_name": "Journal",
-  "description": "A personal journaling app",
+  "description": "A tiny web journaling app",
   "start_url": "./?homescreen=1",
   "scope": "./",
   "display": "standalone",
