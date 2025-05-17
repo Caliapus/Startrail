@@ -51,19 +51,19 @@ If ```.password``` file is missing, the archive opens when you click Show Archiv
 ---
 
   
-### 🧩 Progressive Web App (PWA)
+###  Progressive Web App (PWA)
 
 * Installable on Android, iOS, and desktop (I tried it only on Android.)
 
 * Yes, it works offline — until you try to write. Then, not so much.
 
 
-### ✨ Mood Rating System
+###  Mood Rating System
 
 Rating is saved as a number (1–5) in the ```entries.json``` file. 
 
 
-### 🛡️ Security
+### 🛡 Security
 
 Security on this app is like a lock drawn in impressionist style on a gate: it might fool robots, but it won't stop anyone motivated.
 
@@ -74,7 +74,7 @@ Security on this app is like a lock drawn in impressionist style on a gate: it m
 * No encryption. No authentication tokens. Just vibes.
 
 
-### 🔮 Future Ideas
+###  Future Ideas
 
 ✏️ Edit/delete entries
 
@@ -83,7 +83,7 @@ Security on this app is like a lock drawn in impressionist style on a gate: it m
 🔄 Full offline sync (aka actual offline support)
 
 
-### 🙌 Credits
+###  Credits
 
 [@EmSuru](!https://github.com/emsuru) for coming up with the star counting idea and getting me hooked to it. 
 
