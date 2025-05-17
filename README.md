@@ -20,7 +20,7 @@ Entries are saved locally in a `entries.json` file for later manipulation, and a
 
 ### 1. Clone or copy the project to your PHP-enabled web server
 
-    git clone https://github.com/Caliapus/Tiny-Web-Mood-Journal
+    git clone https://github.com/Caliapus/Startrail
  
 If you place the app in a subfolder (e.g. example.com/Folder_Name), you'll need to update the start_url and scope in manifest.json accordingly for the App to work properly.
 
