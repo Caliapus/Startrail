@@ -10,8 +10,6 @@ Entries are saved locally in a `entries.json` file for later manipulation, and a
 
 👉 [Try Startrail](https://startrail.caliap.ro) (default password: _password_. Non-persistent entries)
 
-<img src="https://github.com/user-attachments/assets/ac94f95e-2a19-42b7-82fd-0361aec77529" width=300>
-.
 <img src="https://github.com/user-attachments/assets/9533d48e-4498-4af5-b282-de8d31ccdd8e" width=300>
 
 ---
