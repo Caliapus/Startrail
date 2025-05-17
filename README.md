@@ -8,7 +8,7 @@ Entries are saved locally in a `entries.json` file for later manipulation, and a
 
 ## Demo
 
-👉 [Try Startrail](https://startrail.caliap.ro)
+👉 [Try Startrail](https://startrail.caliap.ro) (default password: _password_. Non-persistent entries)
 
 <img src="https://github.com/user-attachments/assets/ac94f95e-2a19-42b7-82fd-0361aec77529" width=300>
 .
@@ -89,9 +89,9 @@ Security on this app is like a lock drawn in impressionist style on a gate: it m
 
 ###  Credits
 
-[@EmSuru](!https://github.com/emsuru) for coming up with the star counting idea and getting me hooked to it. 
+[@EmSuru](https://github.com/emsuru) for coming up with the star counting idea and getting me hooked to it. 
 
-City data via cities5000.csv from [cityjs](!https://github.com/MxAshUp/cityjs)
+City data via cities5000.csv from [cityjs](https://github.com/MxAshUp/cityjs)
 
 Powered by Caipirinha, OpenAI and ❤️ 
 
