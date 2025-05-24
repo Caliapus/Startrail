@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 
 // Check if password is required
-$passwordFile = '.password';
+$passwordFile = __DIR__ . '/../auth/.password';
 $requiresPassword = file_exists($passwordFile);
 
 // If a password is required, enforce cookie check
@@ -14,9 +14,10 @@ if ($requiresPassword && !isset($_COOKIE['archive_validated'])) {
 }
 
 // Load and return entries
-$entriesFile = 'entries.json';
+$entriesFile = __DIR__ . '/../../assets/data/entries.json';
 if (!file_exists($entriesFile)) {
     echo json_encode([]); // No entries yet
+    http_response_code(404);
     exit;
 }
 

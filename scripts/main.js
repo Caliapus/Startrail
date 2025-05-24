@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
 function saveEntry(entryData) {
-  fetch('save_entry.php', {
+  fetch('../php/data/save_entry.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(entryData)
@@ -88,7 +88,7 @@ function saveEntry(entryData) {
 
 
 function loadEntries(triggeredByToggle = false) {
-  fetch('load_entries.php')
+  fetch('../php/data/load_entries.php')
     .then(response => {
       if (!response.ok) {
         if (response.status === 403) {
@@ -143,7 +143,7 @@ function loadEntries(triggeredByToggle = false) {
   function validatePassword() {
     const userPassword = passwordInput.value;
     if (userPassword) {
-      fetch('check_password.php', {
+      fetch('../php/auth/check_password.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'same-origin',
@@ -166,7 +166,7 @@ function loadEntries(triggeredByToggle = false) {
   }
 
   function checkPasswordProtection() {
-    fetch('check_password_protection.php')
+    fetch('../php/auth/check_password_protection.php')
       .then(res => res.json())
       .then(data => {
         if (data) {

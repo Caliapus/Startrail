@@ -18,7 +18,7 @@ if (!is_array($data)) {
     exit;
 }
 
-$filename = 'entries.json';
+$filename = __DIR__ . '/../../assets/data/entries.json';
 
 // Load existing entries or start a new array
 $entries = file_exists($filename) ? json_decode(file_get_contents($filename), true) : [];

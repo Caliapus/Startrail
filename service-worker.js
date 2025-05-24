@@ -1,16 +1,18 @@
-const CACHE_NAME = 'journal-cache-v1';
+const CACHE_NAME = 'journal-cache-v2';
 
 const staticAssets = [
   './',
   './index.html',
-  './style.css',
-  './script.js',
   './manifest.json',
   './service-worker.js',
-  './icon.png',
-  './icon-512.png',
-  './cities/city.js',
-  './cities/cities5000.csv'
+  './styles/style.css',
+  './scripts/main.js',
+  './scripts/city.js',
+  './data/cities5000.csv',
+  './assets/icons/favicon-16x16.png',
+  './assets/icons/favicon-32x32.png',
+  './assets/icons/icon.png',
+  './assets/icons/icon-512.png'
 ];
 
 // Install: Cache all required assets

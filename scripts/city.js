@@ -5,7 +5,7 @@ async function loadCities() {
   if (cached) {
     cities = JSON.parse(cached);
   } else {
-    const response = await fetch('./cities/cities5000.csv');
+    const response = await fetch('../data/cities5000.csv');
     const text = await response.text();
 
     cities = text.split('\n')
