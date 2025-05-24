@@ -244,12 +244,30 @@ function loadEntries(triggeredByToggle = false) {
   // ----- Event Handlers -----
 
   saveButton.addEventListener('click', () => {
+
     const entry = journalInput.value.trim();
+    
+    //an entry is mandatory
+    
     if (!entry) return;
 
+    const rating = parseInt(document.getElementById('entryRating').value, 10);
+    
+    //rating is also compulsory 
+    
+    if (rating <= 0 || isNaN(rating)) {
+      const starsDiv = document.getElementById('starRating');
+      starsDiv.classList.add('shake', 'scale-up');
+
+      // Remove the class after animation completes so it can shake again later
+      setTimeout(() => {
+        starsDiv.classList.remove('shake', 'scale-up');
+      }, 400); // match the animation duration
+      return;
+    }
+    
     const isoTimeToSave = document.getElementById('entryIsoTime').value;
     const final_location = document.getElementById('entryLocation').value;
-    const rating = document.getElementById('entryRating').value;
 
     saveEntry({
       time: isoTimeToSave,
