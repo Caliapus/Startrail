@@ -25,7 +25,7 @@ If you place the app in a subfolder (e.g. example.com/Folder_Name), you'll need 
 ### 2. (Optional) Add password protection
 
 The default password is _password_. To set another one, run `/php/auth/define_password.php` after changing ```password``` in the line 
-```$hash = password_hash('password', PASSWORD_DEFAULT);```. A ```.password``` file will be generated in the same directory with the hashed password. You can delete define_password.php aftewards. 
+```$hash = password_hash('password', PASSWORD_DEFAULT);```. A ```.password``` file will be generated in the same directory with the hashed password. You can delete `define_password.php` aftewards. 
 
 Or just create yourself the `/php/auth/.password` file with a hashed password. I don't care. 
 
@@ -34,7 +34,7 @@ If ```.password``` file is missing, the archive opens when you click Show Archiv
 
 ##  Features
 
-📝 Quick entries – Capture your thoughts in seconds
+📝 Quick entries – Capture your thoughts on the moment
 
 ⏰ Auto timestamp – Local date and time are saved automatically
 
@@ -62,12 +62,12 @@ If ```.password``` file is missing, the archive opens when you click Show Archiv
 
 ###  Mood Rating System
 
-Rating is saved as a number (1–5) in the ```entries.json``` file; as it is the location, the local time (when the page was opened) and the journal entry. 
+Rating is saved as a number (1–5) in the ```entries.json``` file; also the location, the local time (when the page was opened) and the journal entry. 
 
 
 ###  Security
 
-Security on this app is like a lock drawn in impressionist style on a gate: it might fool robots, but it won't stop anyone half-motivated.
+Security on this app is like a lock drawn in impressionist style on a gate ️: it might fool robots, but it won't stop anyone half-motivated.
 
 * `.password` and `entries.json` are meant to be blocked by `.htaccess`. (Read: _should be_.)
 
