@@ -78,7 +78,7 @@ Security on this app is like a lock drawn in impressionist style on a gate ️: 
 
 ###  Future Ideas
 
-🚨 The rating should be compulsory.  
+<s>🚨 The rating should be compulsory.</s> ✔️
 
 ✏️ Edit/delete entries
 
