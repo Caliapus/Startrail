@@ -1,3 +1,13 @@
+//Are stars present? 
+
+const stars_present = true; // Change to false to disable stars/rating
+
+// Hide the rating 
+
+if (!stars_present) {
+  document.querySelector('.rating-group').style.display = 'none';
+}
+
 // Load city data when DOM is ready
 let latestCoords = null; 
 let locationInput;
@@ -54,15 +64,19 @@ function saveEntry(entryData) {
 
         const rating = entryData.rating || 0;
         let starsHTML = '';
-        for (let i = 1; i <= 5; i++) {
-          starsHTML += `<span class="entry-star ${i <= rating ? 'filled' : 'empty'}">★</span>`;
+        
+        //show the stars after submitting only if the rating submitting is enabled
+        if (stars_present) {
+          for (let i = 1; i <= 5; i++) {
+            starsHTML += `<span class="entry-star ${i <= rating ? 'filled' : 'empty'}">★</span>`;
+          }
         }
-
+        
         entryElement.innerHTML = `
           <p><strong>${entryData.location}</strong>, ${date}, ${time}</p>
-          <div class="entry-rating">${starsHTML}</div>
+          ${starsHTML ? `<div class="entry-rating">${starsHTML}</div>` : ''} 
           <p>${formattedInput}</p>`;
-
+        
         const entriesSection = document.getElementById('entries');
         if (entriesSection) {
           entriesSection.insertBefore(entryElement, entriesSection.firstChild);
@@ -117,13 +131,16 @@ function loadEntries(triggeredByToggle = false) {
         // Build rating stars HTML
         const rating = Number(entry.rating) || 0;
         let starsHTML = '';
-        for (let i = 1; i <= 5; i++) {
-          starsHTML += `<span class="entry-star ${i <= rating ? 'filled' : 'empty'}">★</span>`;
+        //show the stars only if the rating was submitted (its value is from 1 to 5)
+        if (rating > 0) {
+            for (let i = 1; i <= 5; i++) {
+              starsHTML += `<span class="entry-star ${i <= rating ? 'filled' : 'empty'}">★</span>`;
+            }
         }
-
+       
         entryElement.innerHTML = `
           <p><strong>${entry.location}</strong>, ${date}, ${time}</p>
-          <div class="entry-rating">${starsHTML}</div>
+          ${starsHTML ? `<div class="entry-rating">${starsHTML}</div>` : ''} 
           <p>${formattedInput}</p>
         `;
 
@@ -251,19 +268,19 @@ function loadEntries(triggeredByToggle = false) {
     
     if (!entry) return;
 
-    const rating = parseInt(document.getElementById('entryRating').value, 10);
-    
-    //rating is also compulsory 
-    
-    if (rating <= 0 || isNaN(rating)) {
-      const starsDiv = document.getElementById('starRating');
-      starsDiv.classList.add('shake', 'scale-up');
+    let rating = 0;
+    if (stars_present) {
+      rating = parseInt(document.getElementById('entryRating').value, 10);
+      // rating is also compulsory if stars are present
+      if ((rating <= 0 || isNaN(rating))) {
+        const starsDiv = document.getElementById('starRating');
+        starsDiv.classList.add('shake', 'scale-up');
 
-      // Remove the class after animation completes so it can shake again later
-      setTimeout(() => {
-        starsDiv.classList.remove('shake', 'scale-up');
-      }, 400); // match the animation duration
-      return;
+        setTimeout(() => {
+          starsDiv.classList.remove('shake', 'scale-up');
+        }, 400);
+        return;
+      }
     }
     
     const isoTimeToSave = document.getElementById('entryIsoTime').value;
@@ -326,12 +343,10 @@ if (navigator.geolocation) {
 } else {
   locationInput.value = "Geolocation not supported";
 }
-
-
   
 // Stars logic //
 
-
+if (stars_present) {
   const stars = document.querySelectorAll('#starRating .star');
   const ratingInput = document.getElementById('entryRating');
 
@@ -361,6 +376,7 @@ if (navigator.geolocation) {
       star.classList.toggle('selected', starVal <= rating);
     });
   }
+}
 
 
 

@@ -1,8 +1,26 @@
 [
     {
-        "time": "2025-05-16T20:50:57.238Z",
+        "time": "2025-05-14T20:50:57.238Z",
         "location": "Avon",
         "input": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec hendrerit mi. Sed a purus mollis metus feugiat gravida. Vivamus gravida nulla eget mollis scelerisque. Aliquam elementum ullamcorper convallis. Sed eget felis leo. Mauris tristique massa eu risus tincidunt porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam aliquet at felis ac faucibus.",
+        "rating": "2"
+    },
+    {
+        "time": "2025-05-15T11:57:44.790Z",
+        "location": "Fontainebleau",
+        "input": "Nam molestie ipsum in sem tempor vulputate. Nam laoreet tincidunt leo, at volutpat nulla. Donec dictum velit ut dolor finibus eleifend. Maecenas non gravida diam, in malesuada erat. Fusce ac velit viverra nisi tristique finibus a id lacus. Nunc tempor pharetra ipsum, id consequat mi venenatis in. Aenean vel aliquet augue.",
         "rating": "4"
+    },
+    {
+        "time": "2025-05-17T12:06:45.298Z",
+        "location": "Avon",
+        "input": "Github ready. 🥳",
+        "rating": "5"
+    },
+    {
+        "time": "2025-06-15T20:39:47.924Z",
+        "location": "Paris",
+        "input": "It is a loveleh day ☀️🌧️🌈and this is a test input without stars, because the stars_present variable is false in script.js so the rating is counted as 0",
+        "rating": 0
     }
 ]
